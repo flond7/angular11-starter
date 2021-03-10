@@ -1,6 +1,22 @@
-/* COLORS */
-$dark: #1b1b1b 
-$green: #7fe223
+/* PALETTE */
+ $ten: #c0d461
+$nine: #aef78e
+$eight: #CAFFB9
+$seven: #66a182
+$six: #ffdab5
 
-// your _variables.scss file
-$brand-color: #800000
+$five: #334649
+$four: #4E7A6A
+$three: #8ce0ac
+$two: #cbc973
+$one: #fecf6c
+
+// redefine bootsrap colors
+$theme-colors: ("primary": #fecf6c,"danger": #ec7357,"warning":#ffdab5,"info":#8ce0ac,"dark": #11222,"light": #fff,"muted": #ccc)
+
+// Bootstrap and its default variables - LOAD AFTER THEME COLORO
+@import ~bootstrap/scss/bootstrap
+
+/* OTHER COLORS */
+$dark-l: lighten($dark, 5)
+$dark-d: darken($dark, 5)
