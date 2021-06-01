@@ -1,5 +1,5 @@
 /* PALETTE */
- $ten: #c0d461
+$ten: #c0d461
 $nine: #aef78e
 $eight: #CAFFB9
 $seven: #66a182
@@ -12,7 +12,7 @@ $two: #cbc973
 $one: #fecf6c
 
 // redefine bootsrap colors
-$theme-colors: ("primary": #fecf6c,"danger": #ec7357,"warning":#ffdab5,"info":#8ce0ac,"dark": #11222,"light": #fff,"muted": #ccc)
+$theme-colors: ("primary": #fecf6c,"danger": #ec7357,"warning":#ffdab5,"info":#8ce0ac,"dark": #112222,"light": #fff,"muted": #ccc)
 
 // Bootstrap and its default variables - LOAD AFTER THEME COLORO
 @import ~bootstrap/scss/bootstrap
@@ -20,3 +20,12 @@ $theme-colors: ("primary": #fecf6c,"danger": #ec7357,"warning":#ffdab5,"info":#8
 /* OTHER COLORS */
 $dark-l: lighten($dark, 5)
 $dark-d: darken($dark, 5)
+$gray: #959595
+
+/* SIMIL BOOTSTRAP COLOR STYLES */
+.text-gray
+  color: $gray
+.border-bottom-gray
+  border-bottom: solid 1px #c7c7c74d
+.border-right-gray
+  border-right: solid 1px rgba(255,255,255,0.3)   
