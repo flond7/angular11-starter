@@ -1,4 +1,5 @@
 # ANGULAR 11 STARTER PROJECT - empty 
+- HEAD: master
   
 ## Ng commands
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
@@ -14,9 +15,9 @@ git config --global user.name "NICK"
 git config --global user.mail mail@gmail.com  
 git config --global user.password *********  
 git commit -m "first commit"  
-git branch -M main  
+git branch -M master  
 git remote add origin https://github.com/flond7/angular-startingPoint.git  
-git push -u origin main 
+git push -u origin master 
   
 git branch (check branch name)  
 git branch -mv origin master (change name from origin to master)  
