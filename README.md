@@ -26,9 +26,9 @@ git remote -v (check origin)
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git (change repository)  
   
   
-## DEPLOY ON APACHE
+# DEPLOY ON APACHE
   
-# on the front end side
+## on the front end side
 - if on the server the app is on a subfolder (ex: /var/www/html/NAME-OF-THE-APP) in index.html change the base parameter  
   <base href="/NAME-OF-THE-APP/">  
 - ng build --prod   
@@ -37,7 +37,7 @@ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git (change rep
     change the maximumError property in budget (and check if there is unused code you can delete)  
 - add an .htaccess file to the dist folder (search on github, canalette-frontend for a template)  
   
-# on the server
+## on the server
 - copy the dist folder in /var/www/html/ and check the permissions and eventually change permissions to amministratore  
   sudo chown -R amministratore:amministratore /var/www/html/NAME-OF-THE-APP
 
@@ -48,5 +48,5 @@ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git (change rep
     Require all granted
   </Directory>
   
-# test frontend
+## test frontend
 - PROBLEM: doesn't find runtime.js or other files, check if base is correct in index.html
