@@ -1,24 +1,12 @@
-# Angular starter - empty project
-
-
-# Starter
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
-
+# ANGULAR 11 STARTER PROJECT - empty 
+  
 ## Ng commands
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.  
 Run `ng g components/component-name component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`. 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.  
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).  
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).  
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
+  
+  
 ## GITHUB
 git init  
 git add README.md   
@@ -36,3 +24,29 @@ git branch -mv origin master (change name from origin to master)
   
 git remote -v (check origin)  
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git (change repository)  
+  
+  
+## DEPLOY ON APACHE
+  
+# on the front end side
+- if on the server the app is on a subfolder (ex: /var/www/html/NAME-OF-THE-APP) in index.html change the base parameter  
+  <base href="/NAME-OF-THE-APP/">  
+- ng build --prod   
+  builds in dist folder everything you need  
+  - in case of exeeded budget error in angular.json  
+    change the maximumError property in budget (and check if there is unused code you can delete)  
+- add an .htaccess file to the dist folder (search on github, canalette-frontend for a template)  
+  
+# on the server
+- copy the dist folder in /var/www/html/ and check the permissions and eventually change permissions to amministratore  
+  sudo chown -R amministratore:amministratore /var/www/html/NAME-OF-THE-APP
+
+- in /etc/apache2/apache2.conf add
+  <Directory "/var/www/html/name-of-the-app">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Require all granted
+  </Directory>
+  
+# test frontend
+- PROBLEM: doesn't find runtime.js or other files, check if base is correct in index.html
