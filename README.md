@@ -36,4 +36,3 @@ git branch -mv origin master (change name from origin to master)
   
 git remote -v (check origin)  
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git (change repository)  
-
